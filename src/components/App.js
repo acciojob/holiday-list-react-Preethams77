@@ -33,7 +33,7 @@ const App = () => {
     { name: 'Tirupati', country: 'India' },
     ]);
     
-  return (
+ /* return (
     <div id="main">
              <ol id="location">
               {cityList.map((name,idx)=>{
@@ -45,4 +45,16 @@ const App = () => {
   )
 }
 
-export default App
+export default App*/
+    return (
+    <div id="main">
+        <ol id="location">
+        {cityList.map((city,idx)=>{
+          if(city.country==="India"){
+            return <li id={`location${idx+1}`}>{city.name}</li>
+          }
+        })}
+        </ol>
+    </div>
+  )
+}
